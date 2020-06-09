@@ -391,6 +391,9 @@ background-size: 50%;
     border: none;
     outline: none;
 }
+.request-inp:focus{
+    outline: none;
+}
 .contact-tel{
     display: flex;
     flex-direction: column;
@@ -404,6 +407,11 @@ background-size: 50%;
     margin-top: 60px;
     
 }
-.contact-social img{
-
+.howstudy-slider img{
+    width: 350px;
+}
+.howstudy-slider {
+    position: relative;
+    bottom: 91px;
+    left: 321px;
 }

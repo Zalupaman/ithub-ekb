@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./owlcarousel/assets/owl.theme.default.min.css">
     <script type="text/javascript">
         var total_pics_num = 3; // колличество изображений
-        var interval = 5000;    // задержка между изображениями
+        var interval = 3000;    // задержка между изображениями
         var time_out = 1;       // задержка смены изображений
         var i = 0;
         var timeout;
@@ -102,9 +102,12 @@
                     <p class="howstudy-desc_1">Занятия в мастерских и <br>офисе «741Студиос.ру» под руководством наставников</p>
                     <p class="howstudy-desc_2">Занятия онлайн + самостоятельная работа на платформе «Булгаков»</p>
                     <p class="howstudy-desc_3">Стажировка и практика в IT-компаниях Екатеринбурга</p>
-                    <!-- <img src='./img/howwestudy-slide-1.png' id="image_1" style="opacity: 0; filter: alpha(opacity=0); position: absolute;" />
-                    <img src='./img/howwestudy-slide-2.png' id="image_2" style="opacity: 0; filter: alpha(opacity=0); position: absolute;" />
-                    <img src='./img/howwestudy-slide-3.png' id="image_3" style="opacity: 0; filter: alpha(opacity=0); position: absolute;" /> -->
+                    <div class="howstudy-slider">
+                        <img src='./img/howwestudy-slide-1.png' id="image_1" style="opacity: 0; filter: alpha(opacity=0); position: absolute;" />
+                        <img src='./img/howwestudy-slide-2.png' id="image_2" style="opacity: 0; filter: alpha(opacity=0); position: absolute;" />
+                        <img src='./img/howwestudy-slide-3.png' id="image_3" style="opacity: 0; filter: alpha(opacity=0); position: absolute;" />
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -312,7 +315,7 @@
                             <input type="text" placeholder="Ваше имя и фамилия" class="request-inp">
                             <input type="text" placeholder="E-mail" class="request-inp">
                             <input type="text" placeholder="Телефон" class="request-inp">
-                            <button class="request-btn"></button>
+                            <button class="request-btn" type="submit"></button>
                         </form>
                         <div class="contact col-4">
                             <div class="contact-tel">
