@@ -1,0 +1,65 @@
+header{
+    background: url(../img/header-bg.png);
+    background-position-x: right;
+    height: 950px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 124px;
+}
+
+.nav_links a{
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 70px;
+}
+.nav_links a:first-child{
+    color: #AB00EA;
+}
+
+.topWindow {
+    
+    position: fixed;
+    top: 100px;
+    left: 5%;
+    z-index:9999; /* Чтобы приклеенный элемент располагался над всеми остальными элементами страницы */
+}
+.header_title{
+    margin-top: 150px;
+    font-size: 70px;
+    font-weight: 700;
+    color: #fff;
+}
+.header-subtitle{
+    font-size: 30px;
+    color: #fff;
+    margin-top: 30px;
+    font-weight: 300;
+}
+.btn_header{
+    color: #fff;
+    font-family: 'Roboto',sans-serif;
+    width: 280px;
+    height: 70px;
+    border: 3px #AB00EA solid;
+    
+    font-weight: bold;
+    font-size: 30px;
+    background: transparent;
+    outline: none;
+    transition: all .2s ease;
+    margin-top: 160px;
+}
+.btn_header:focus{
+    outline: none;
+}
+.btn_header:hover{
+    background-color: #AB00EA;
+    box-shadow: 0 0 20px 0 #AB00EA;
+    border-radius: 5px;
+    color: #fff;
+}

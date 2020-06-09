@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ItHub - Екатеринбург</title>
+
+
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./owlcarousel/assets/owl.theme.default.min.css">
+    <script type="text/javascript">
+        var total_pics_num = 3; // колличество изображений
+        var interval = 5000;    // задержка между изображениями
+        var time_out = 1;       // задержка смены изображений
+        var i = 0;
+        var timeout;
+        var opacity = 100;
+        function fade_to_next() {
+          opacity--;
+          var k = i + 1;
+          var image_now = 'image_' + i;
+          if (i == total_pics_num) k = 1;
+          var image_next = 'image_' + k;
+          document.getElementById(image_now).style.opacity = opacity/100;
+          document.getElementById(image_now).style.filter = 'alpha(opacity='+ opacity +')';
+          document.getElementById(image_next).style.opacity = (100-opacity)/100;
+          document.getElementById(image_next).style.filter = 'alpha(opacity='+ (100-opacity) +')';
+          timeout = setTimeout("fade_to_next()",time_out);
+          if (opacity==1) {
+            opacity = 100;
+            clearTimeout(timeout);
+          }
+        }
+        setInterval (
+          function() {
+            i++;
+            if (i > total_pics_num) i=1;
+            fade_to_next();
+          }, interval
+        );
+      </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <img src="./img/logo-ithub.png" id="ithub-logo" alt="ithub-logo">
+                <div class="nav_links">
+                    <a href="#">#Учись онлайн </a>
+                    <a href="#">Специальности</a>
+                    <a href="#">Курсы</a>
+                    <a href="#">Новости</a>
+                    <a href="#">Контакты</a>
+                </div>
+            </nav>
+            <p class="header_title">Филиал IThub college <br>в Екатеринбурге </p>
+            <p class="header-subtitle">Получи продвинутое образование и опыт<br> работы одновременно!</p>
+            <button class="btn_header">Поступить</button>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="fillial">
+                <p class="fillial_title">О ФИЛИАЛЕ</p>
+                <div class="row">
+                    <div class="col col-xl-6 col-lg-12 col-md-12"> <img src="./img/fillial-bg.png" alt="" style="width: 120%;"> </div>
+                    <div class="col col-xl-6 col-lg-12 col-md-12">
+                        <div class="fillial_desc">
+                            <p class="fillial_desc-title">Международный колледж IThub открывает филиал в Екатеринбурге.</p>
+                            <p class="fillial_desc-txt">Мы запускаем новый формат обучения программистов и разработчиков: дистанционное обучение у преподавателей в Москве (онлайн-уроки) и занятия на платформе «Булгаков» + практика и стажировки в IT-компаниях твоего города. Приходи учиться после 9 и 11 класса!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="project-study">
+                <p class="project-study_title">УЧИМСЯ В IT-КОМПАНИИ</p>
+                <div class="project-study_inner">
+                    <p class="project-study_desc">Учиться на проектах — хорошо. А что если пойти ещё дальше и учиться в процессе работы? Тем более в Екатеринбурге студенты сразу находятся внутри IT-компании: обучение проходит на базе софтверной компании «741Студиос.ру». </p>
+                    <p class="project-study_bloquote">741Студиос.ру занимается разработкой программного обеспечения под заказ уже больше 10 лет. Наши клиенты – крупные международные компании. Как и все представители IT-отрасли, мы испытываем кадровый голод – нам нужны программисты-разработчики. В этом году мы рады новому партнеру – колледжу IThub. Практико-ориентированный подход и тесное взаимодействие с работодателями – залог успеха выпускников!</p>
+                    <p class="project-study_name">Максим Грохульский<br>
+                        директор по развитию «741Студиос.ру»</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="howstudy">
+                <p class="howstudy-title">КАК МЫ УЧИМСЯ</p>
+                <div class="howstudy-inner">
+                    <p class="howstudy-desc_1">Занятия в мастерских и <br>офисе «741Студиос.ру» под руководством наставников</p>
+                    <p class="howstudy-desc_2">Занятия онлайн + самостоятельная работа на платформе «Булгаков»</p>
+                    <p class="howstudy-desc_3">Стажировка и практика в IT-компаниях Екатеринбурга</p>
+                    <!-- <img src='./img/howwestudy-slide-1.png' id="image_1" style="opacity: 0; filter: alpha(opacity=0); position: absolute;" />
+                    <img src='./img/howwestudy-slide-2.png' id="image_2" style="opacity: 0; filter: alpha(opacity=0); position: absolute;" />
+                    <img src='./img/howwestudy-slide-3.png' id="image_3" style="opacity: 0; filter: alpha(opacity=0); position: absolute;" /> -->
+                </div>
+            </div>
+        </div>
+
+
+            <div class="container">
+                <div class="questions">
+                    <p class="questions-title">ЕСТЬ ВОПРОСЫ?</p>
+                    <p class="questions-subtitle">Оставь номер телефона, мы перезвоним!</p>
+                    <div class="questions-inp_block row">
+                        <input type="text" placeholder="Ваше имя" class="col questions_inp">
+                        <input type="tel" name="phone_number" class="col questions_inp" list="tel-list" placeholder="Ваш телефон" >
+                        <button class="btn_questions col" type="submit">Перезвоните мне</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bulgakov">
+                
+                <div class="container">
+                    
+                    <p class="bulgakov-title">БУЛГАКОВ — ИННОВАЦИОННАЯ ОНЛАЙН-ПЛАТФОРМА </p>
+                    <p class="bulgakov-subtitle">Выбирай бизнес-роль и иди к цели! Хочешь быть разработчиком мобильных приложений или геймдизайнером? Траектория построена — останется пройти набор курсов и выполнить задания! </p>
+                    
+                    
+                        <img src="./img/bulgakov-bg.png" class="bulgakov-bg" alt="">
+                        <div class="bulgakov-desc ">
+                            <div class="bulgakov-desc_achieve  row">
+                                
+                                <div class="row col-7">
+                                    <div class="col-4 bulgakov-imgs">
+                                        <img src="./img/bulgakov-1.png" alt="">
+                                        <img src="./img/bulgakov-2.png" alt="">
+                                        <img src="./img/bulgakov-3.png" alt="">
+                                    </div>
+                                    <div class="col-8 bulgakov-descs">
+                                        <div class="bulgakov_achieve-item">
+                                            
+                                            <div class="bulgakov_achieve-desc">
+                                                <p class="bulgakov_achieve-title">Осваивай профессию дистанционно 
+                                                </p>
+                                                <p class="bulgakov_achieve-txt">у тебя будет личный кабинет, план обучения, трекер достижений </p>
+                                            </div>
+                                        </div>
+                                        <div class="bulgakov_achieve-item">
+                                    
+                                            <div class="bulgakov_achieve-desc">
+                                                <p class="bulgakov_achieve-title">Собирай портфолио 
+                                                </p>
+                                                <p class="bulgakov_achieve-txt">все проекты, компетенции и сертификаты оцифрованы — останется только показать работодателю</p>
+                                            </div>
+                                        </div>
+                                        
+                                <div class="bulgakov_achieve-item">
+                                    
+                                    <div class="bulgakov_achieve-desc">
+                                        <p class="bulgakov_achieve-title">Совмещай работу и учёбу</p>
+                                        <p class="bulgakov_achieve-txt">можно учиться в своём темпе</p>
+                                    </div>
+                                </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                   
+
+                </div>
+            </div>
+            <div class="prepods">
+                <div class="container">
+                    <div class="prepods-title">
+                        Архитекторы специальностей 
+                        и преподаватели 
+                    </div>
+                    <img src="./img/dark-bg.png" class="dark-left dark" alt=""><img src="./img/dark-bg.png" class="dark-right dark" alt="">
+                </div>
+                <div class="prepod-slider">
+                    
+                    <div class="owl-carousel">
+                        <div class="prepod">
+                            <img src="./img/fedotov-slider.png" alt="">
+                            <div class="prepod-desc">
+                                <p class="prepod-name">Евгений  Федотов</p>
+                                <p class="prepod-role">архитектор специальности “Программирование”, заместитель директора по учебно-производственной работе в IThub college</p>
+                            </div>
+                        </div>
+                        <div class="prepod">
+                            <img src="./img/borisov-slider.png" alt="">
+                            <div class="prepod-desc">
+                                <p class="prepod-name">Игорь Борисов</p>
+                                <p class="prepod-role">
+
+                                    преподаватель Python, более 25 лет опыта в программировании, 
+                                    обладатель сертификатов  Zend Certified Engineer, </p>
+                            </div>
+                        </div>
+                        <div class="prepod">
+                            <img src="./img/gayk-slider.png" alt="">
+                            <div class="prepod-desc">
+                                <p class="prepod-name">Гайк Инанц</p>
+                                <p class="prepod-role">преподаватель веб-разработки в МФТИ и HackerU, в Школе Data-инженеров в Сбербанкео</p>
+                            </div>
+                        </div>
+                        <div class="prepod">
+                            <img src="./img/surnacheva-slider.png" alt="">
+                            <div class="prepod-desc">
+                                <p class="prepod-name">Александра Сурначёва</p>
+                                <p class="prepod-role">преподаватель JavaScript, HTML и CSS с опытом работы фронтенд-разработчиком на проектах резидентов </p>
+                            </div>
+                        </div>
+                        <div class="prepod">
+                            <img src="./img/olshanskaya-slider.png" alt="">
+                            <div class="prepod-desc">
+                                <p class="prepod-name">Светлана Ольшанская</p>
+                                <p class="prepod-role">преподаватель Adobe Photoshop, графического и веб-дизайна, фотографии с высшим педагогическим образованием (ИЗО и </p>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+
+            </div>
+            <div class="material-base">
+                <div class="container">
+                    <p class="material-base_title">МАТЕРИАЛЬНАЯ БАЗА КОЛЛЕДЖА </p>
+                    <div class="material-base_inner">
+                        <p class="material-base_desc-1">Лаборатории сетевых технологий, аппаратного обеспечения, облачных технологий, программирования,<br> веб-разработки.  </p>
+                        <p class="material-base_desc-2">Учебные аудитории 3 класса<br> 
+                            по 65 кв.м. и большой зал 113 кв.м. </p>
+                        <p class="material-base_desc-3">Общежитие в 5 минутах пешком от колледжа — от 200 рублей в сутки </p>
+                        <p class="material-base_desc-4">Столовая на 1 этаже </p>
+                    </div>
+                </div>
+            </div>
+            <div class="certificate">
+                <div class="container">
+                    <p class="certificate-title">ДИПЛОМЫ И СЕРТИФИКАТЫ 
+                    </p>
+                    <p class="certificate-subtitle">Ты получишь официальное подтверждение своих знаний: диплом государственного образца о получении среднего профессионального образования и международные сертификаты Microsoft, Adobe, Apple.</p>
+                </div>
+                <div class="owl-carousel">
+                    <img src="./img/srednee-prof.png" alt="" >
+                    <img src="./img/high-kval.png" alt="">
+                    <img src="./img/microsoft-spec.png" alt="">
+                </div>
+            </div>
+            <div class="open-day">
+                <div class="container">
+                    <p class="open-day_title">День открытых дверей</p>
+                    <div class="open-date row">
+                        <img src="./img/openday-img.png" width="500px" height="450px"class="col" alt="">
+                        <div class="open-desc col">
+                            <img src="./img/openday-bg.png" width="100%" alt="">
+                            <div class="open-desc_txt">
+                                <p class="open-desc_txt-title">10 июня в 16:00 (МСК) 
+                                    День открытых дверей «Welcome to Ekaterinburg»! 
+                                    </p>
+                                <p class="open-desc_txt-desc">Расскажем, как будем учиться и зачем нужно поступать именно в екатеринбургский филиал (спойлер: самый быстрый способ построить карьеру в IT). </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="speakers">
+                    <div class="container">
+                        <p class="speakers-title">Спикеры           </p>
+                    </div>
+                    <div class="speakers-inner">
+                        <div class="container">
+                            <div class="speakers_items row">
+                                <div class="speaker col">
+                                    <img src="./img/speakers-sumbatyan.png" alt="">
+                                    <div class="speaker-desc">
+                                        <p class="speaker_title">Михаил Сумбатян </p>
+                                        <p class="speaker_desc">директор колледжа IThub</p>
+                                    </div>
+                                </div>
+                                <div class="speaker col">
+                                    <img src="./img/speakers-grohulsky.png" alt="">
+                                    <div class="speaker-desc">
+                                        <p class="speaker_title">Максим Грохульский
+                                        </p>
+                                        <p class="speaker_desc">директор по развитию «741Студиос.ру»</p>
+                                    </div>
+                                </div>
+                                <div class="speaker col">
+                                    <img src="./img/speakers-gral.png" alt="">
+                                    <div class="speaker-desc">
+                                        <p class="speaker_title">Кристина Граль
+                                        </p>
+                                        <p class="speaker_desc">архитектор специальности “Коммерция в IT”, коммерческий директор IThub</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="request">
+                <div class="container">
+                    <p class="request-title">ОТПРАВИТЬ ЗАЯВКУ</p>
+                    <div class="row">
+                        <form class="request-form col-8">
+                            <input type="text" placeholder="Ваше имя и фамилия" class="request-inp">
+                            <input type="text" placeholder="E-mail" class="request-inp">
+                            <input type="text" placeholder="Телефон" class="request-inp">
+                            <button class="request-btn"></button>
+                        </form>
+                        <div class="contact col-4">
+                            <div class="contact-tel">
+                                <a href="tel:+7 (499) 350-90-53" class="contact_phone">+7 (499) 350-90-53</a>
+                                <a href="mailto:priem@ithub.ru" class="contact-mail">priem@ithub.ru</a>
+                            </div>
+                            <div class="contact-social">
+                                <img src="./img/fb-purple-soc.png" alt="">
+                                <img src="./img/inst-purple-soc.png" alt="">
+                                <img src="./img/vk-purple-soc.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <script src="./js/index.js"></script>
+    <script src="./owlcarousel/owl.carousel.min.js"></script>
+        <script>
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:50,
+    nav:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        800:{
+            items:2
+        },
+        1000:{
+            items:3
+        },
+        1200:{
+            items:4
+        },
+        1500:{
+            items:5
+        }
+    }
+})
+    </script>
+</body>
+</html>
