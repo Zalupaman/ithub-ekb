@@ -204,6 +204,7 @@ background-size: 50%;
 .bulgakov-bg{
     position: absolute;
     left: 0;
+    width: 50%;
 }
 .bulgakov-desc_achieve {
     padding-top: 50px;
@@ -239,13 +240,14 @@ background-size: 50%;
     position: absolute;
     z-index: 9999;
     box-shadow: 0 0 100px 0 #000;
+    width: 200px;
+    margin-top: 84px;
 }
 .dark-right{
-    right: -320px;
-    
+    right: 0;
 }
 .dark-left{
-    left: -320px;
+    left: 0;
 }
 
 .material-base_title{
